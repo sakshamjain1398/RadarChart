@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Radar Chart</title>
+
+		<!-- Google fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<!--Bootstrap CSS-->
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<!-- D3.js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	
+	</head>
+	<body>
+		<header><h1>Radar Chart</h1></header>
+		<div class="row">
+			<div class="radarChart col-md-9"></div>
+			<div class="col-md-3 form-group">
+				<div class="checkboxInput">
+					<br />
+					<br />
+					<h3>Measures</h3>
+					<br /> <br />
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" name="intensity" id="intensity" >
+					<label class="form-check-label" for="intensity">intensity</label>
+					</div>
+					<br />
+					<div class="form-check">
+					<input type="checkbox" class="form-check-input" name="likelihood" id="likelihood" >
+					<label class="form-check-label" for="likelihood">likelihood</label>
+					</div>
+					<br />
+					<div class="form-check">
+					<input type="checkbox" class="form-check-input" name="relevance" id="relevance">
+					<label class="form-check-label" for="relevance">relevance</label>
+					</div>
+				</div>
+
+		<form class="form-group checkboxInput" id="radioForm">
+			<br />
+					<br />
+			<h3>Show</h3>
+					<br /> <br />
+			<div class="form-check">
+			<input type="radio" class="form-check-input" name="show" value="topic" checked>
+			<label class="form-check-label" >Topic</label>
+			</div>
+			<br />
+			<div class="form-check">
+			<input type="radio" class="form-check-input" name="show" value="sector">
+			<label class="form-check-label" >Sector</label>
+			</div>
+			<br />
+			<div class="form-check">
+			<input type="radio" class="form-check-input" name="show" value="region">
+			<label class="form-check-label" >Region</label>
+			</div>
+			<br />
+			<div class="form-check">
+			<input type="radio" class="form-check-input" name="show" value="pestle">
+			<label class="form-check-label">Pestle</label>
+			</div>
+		</form>
+	</div>
+		</div>
+		
+		<script type="text/javascript" src="jsondata.json"></script>
+		<script src="radarChart.js"></script>	
+		<script type="text/javascript" src="app.js"></script>
+	</body>
+</html>
